@@ -1,5 +1,5 @@
 {
-  "name": "ripgrepjs",
+  "name": "@securisec/ripgrepjs",
   "version": "1.0.0",
   "description": "A js wrapper for ripgrep",
   "main": "dist/index.js",

@@ -22,7 +22,7 @@ Ripgrep is a simple module that allows chaining ripgrep options on top of each o
 
 To instantiate the class, use:
 ```
-const {RipGrep} = require('ripgrepjs')
+const {RipGrep} = require('@securisec/ripgrepjs')
 // The ripgrepjs class takes two arguments. The regex to search for and the folder path to search in
 // A third argument can be provided if ripgrep is not install in $PATH
 
