@@ -1,0 +1,27 @@
+{
+  "name": "ripgrepjs",
+  "version": "1.0.0",
+  "description": "A js wrapper for ripgrep",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "tsc index.ts --module commonjs; node ./dist/index.js; node ./tests/test.js",
+    "docs": "typedoc --out docs index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/securisec/ripgrepjs.git"
+  },
+  "keywords": [
+    "ripgrep"
+  ],
+  "author": "Hapsida @securisec",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/securisec/ripgrepjs/issues"
+  },
+  "homepage": "https://github.com/securisec/ripgrepjs#readme",
+  "devDependencies": {
+    "@types/node": "^11.13.8"
+  }
+}

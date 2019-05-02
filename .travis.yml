@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+- '8'
+cache:
+  directories:
+  - node_modules
+before_install:
+- cp ./tests/api.json ~/.saram.conf
+- npm i -g typescript
+- npm i -g typedoc
+script:
+- npm test
+- npm run docs
+- ls -s ./docs/
+notifications:
+  slack:
+    secure: UcdQDlt2ZySU+bgypvnp6i00gGyqmQ7s305oK99BXLY3EVuqRo3FVKA5jyWK6ClCmzuexhoYcJjehAh+34O9RrGcJC+H7qqHUZXmFob108YSvV/Oz0Llx3FG9Q50gmY/kvGGdC0tDLlQlGo5eb67Os9dYgDEvNgCxcS1533Got31dZ6Oahf3d+TXt60KTlRJDrRZjlPdntlw8FgDM20ajXGTWkf2Gu4ai/NBk4cWQ6jG3JMtrurhxwnvccgkczrauTHUn5h1Wm+ewGPwYi7RheTPBOhDsOU7VaYs7HKR95BiVuFVREbn0kO1SxPHLPhp2mIR7/vxa/0cIGOMHzRm1cx5vRd+h9/1Z8GMXtY6LvzlUaNeRmNrT1F7nwM04wknnLmPblNo74z7SJHXGCUoy5BCbR502aBKmmEunnuCH9CIF0UmcZXJp5a5KaRvYIdkLi252w+HF/xw8aoIqbutpg5vYrDp8MjmQg+h0l/MHa9aZ6DlSd1ct9kBk14X7V3TiEj/d6f9ri01NtKUXCfWUVa5mZhBWlmCHuVZIAoYHePotEI0gfghS1jc5ssKBc0IyI1Nm++zcPbZ1mc85BeV0gxJPKgLyPxJ7MBTsWLeLjjEbORHXtbl8Xe17Skn87y5ztjZwabSXygCnrkyC/X3an4jFKYzuqukIh/bmEUaE8A=
+deploy:
+  provider: npm
+  email:
+    secure: I3ghG1A3GZwWzhM+IscaH++9NacSN5j3SC210AxTg0eKhsGYkwM0t6FBZITy4jW+xbqRnCLLztyzAJWewF0+fEwxfnYQt8kXf6gr1Ucf0f0rWU/1pWXFxdQqc/kXPztpGMLTvvoHnmW3wmbkKVhKz1XueO2rNlGaf82X4rkYFpcvqlpNyasxkz+HFXxlzElR2E4Jd0rhyE3/CgK+2eyILRBsL9LvY5P0sqD/6WCpFRg6wrYRuMaNH7Bk0CY3gK1kEzgqV/Y3Wx+GxzfbIKiRRze4FoUN1YtG5EbGZ3+g2RlSlPGNP6NFELK3BNtqjkvkB10+7fTieJ0W90e+iRZj3f84MlHymXn6f6RX4B4IXJNawVaH83oaom8R7iaosZmQJitaTZvBpe4xY1LJxSxS0kfY+LJKiIlpbxUYAcBQmTKTFEmMKDJBwfAtHBIAr5Be+Sgh1ttV4lnsC6qMHRWoWEwaFbKzHZjSLjc5GCgY1+15wXhInzUvlaQiB0Hdk5fP/VrTV5lxXkxkmVOu6mn4wIQtjxCLeKvA/f8NDiFL12PwkPbPEr3fMe03SS/MjHEaAMRb6YqhyF/CYpCB3SiK1rwHy1zxZknI/TiskdVzqqhIf8tM6WZYTbCycrb2ROjiiFC4un8zIMHpVZYIKynA5SBiuci1v52r6j3axnuRFjA=
+  api_key:
+    secure: VKMTvYm8aCi3B0MSIxqBRlf2mUqCCjIBx/91x5c8xSMEflltyDXl3AZfQi7pAEMlqbKslOS6qDzQeMsQ9l+3YNL1W3DbJReTbXUTgHu3Lfm3ZgOe69SWv+5gKDrJAp+3KzSREqo2T8Per2/RPchmdz5wcygWQO3pqXWF01Dw4fSLy9rUep6G7ptvEwVcs+vGrNvNXvUJg+/OkEu0VMoRD9IJ/Hnb6PSwh8/69Z6ddaPtXqZ/IsLky2dsai/UqTfEPtS105qh0+6GhiDz0bg3IeXi780ISVHZllIe8Dzpuwe5rKuxuLtd9G7NkeoB2OOLI4pDyD7a2G/NbhAp6Os695XOR4YluOTXD01tYDreRe+QU+SwBOtDB/R8Tt+FiXzgQqsuyW8nrKp9jX8OU1unGaJe0Io+AJsmvq92Ixofgva8XuyJXMKnH/qiyClVkMv64WD+/OpFdX8hrQv1d2rDZ/+scTeba282/FoXREAnMOpStPRgZPOIJULSzWR2vElOQQLEylvfRMV2r30Ik2ZEtMgdS6USY9qV2R/VJTZUQpFkxTLV6vhOwU4tOoUwRpfPHu2V/pVUfEE/4V1xcTHW/oCK9nrrehwodnVyD7DfPc1qrl96jsVLv7/IEUCKgqIObKISt6fx/w9ofWoqBAt8yCfdkoUv1ZWVrs0S/AJYGAI=
+  on:
+    tags: true
+    repo: securisec/ripgrepjs
+    skip_cleanup: true
