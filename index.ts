@@ -1,4 +1,4 @@
-import { execSync, exec } from 'child_process';
+import { execSync } from 'child_process';
 
 class RipGrep {
 	private pattern: string;
@@ -1762,4 +1762,4 @@ class RipGrep {
 	};
 }
 
-export = {RipGrep}
+export = { RipGrep };
