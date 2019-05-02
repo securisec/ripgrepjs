@@ -7,6 +7,7 @@ cache:
 before_install:
 - npm i -g typescript
 - npm i -g typedoc
+- npm i
 script:
 - npm test
 - npm run docs
