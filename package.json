@@ -1,5 +1,5 @@
 {
-  "name": "rgjs",
+  "name": "ripgrep-node",
   "version": "1.0.0",
   "description": "A js wrapper for ripgrep",
   "main": "dist/index.js",

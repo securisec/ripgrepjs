@@ -2,7 +2,7 @@
 const child_process_1 = require("child_process");
 class RipGrep {
     /**
-     *The main class to instantiate for ripgrepjs
+     *The main class to instantiate for ripgrep-node
      * @param {string} pattern A regular expression used for searching. To match a pattern
            beginning with a dash, use the -e/--regexp option.
      * @param {string} path A file or directory to search. Directories are searched
